@@ -16,7 +16,6 @@ jobs:
               export PYTHONHASHSEED=42
               export BUILD_FILE_NAME=operator-${RELEASE_VERSION}-darwin-amd64;
               mkdir ${BUILD_FILE_NAME};
-              ls /opt/local/lib/
               brew install postgresql
               brew install krb5
               pip3 install psycopg2-binary
