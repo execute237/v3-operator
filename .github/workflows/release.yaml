@@ -16,17 +16,25 @@ jobs:
               brew install postgresql
               brew install krb5
               pip3 install psycopg2-binary
+              brew install openssl
+              brew upgrade python@3
               brew reinstall apr-util
               poetry install --no-interaction --no-root
               ls /usr/lib/
-              echo 111111
+              echo /usr/local/lib/
               ls /usr/local/lib/
-              echo 111111
+              echo /usr/lib/dyld
               ls /usr/lib/dyld
-              echo 111111
+              echo /usr/local/opt/
               ls /usr/local/opt/
-              echo 111111
+              echo /opt
               ls /opt
+              echo /usr/local/opt/postgresql@14/lib/postgresql@14
+              ls /usr/local/opt/postgresql@14/lib/postgresql@14
+              echo /usr/local/opt/postgresql@14/lib/postgresql@14
+              ls /usr/local/opt/postgresql@14/lib/postgresql@14
+              echo /usr/local/include
+              ls /usr/local/include
               otool -L libgssapi_krb5.2.2.dylib
               export PYTHONHASHSEED=42
 
