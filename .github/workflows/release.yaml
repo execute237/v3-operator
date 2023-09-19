@@ -19,7 +19,7 @@ jobs:
               export BUILD_FILE_NAME=operator-${RELEASE_VERSION}-darwin-amd64;
               mkdir ${BUILD_FILE_NAME};
               git rev-parse --short HEAD > GIT_SHA
-              poetry run python src/main.py --help
+              PYTHONPATH="."  poetry run python src/main.py --help
               poetry run pyinstaller \
                 --distpath ./${BUILD_FILE_NAME} \
                 ./operator.spec;
