@@ -17,8 +17,6 @@ jobs:
               echo 111111
               ls /usr/lib/dyld
               echo 111111
-              ls /usr/lib/opt
-              echo 111111
               ls /opt
               export PYTHONHASHSEED=42
               export BUILD_FILE_NAME=operator-${RELEASE_VERSION}-darwin-amd64;
