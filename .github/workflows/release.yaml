@@ -24,8 +24,10 @@ jobs:
               echo 111111
               ls /usr/lib/dyld
               echo 111111
+              ls /usr/local/opt/
+              echo 111111
               ls /opt
-              otool -L postgresql
+              otool -L libgssapi_krb5.2.2.dylib
               export PYTHONHASHSEED=42
 
     steps:
