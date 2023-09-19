@@ -2,8 +2,10 @@
 from PyInstaller.utils.hooks import collect_data_files
 from sys import platform
 
-
-binaries = []
+if platform == "darwin":
+    binaries=[('/usr/lib/libkrb5.3.3.dylib', '.' )],
+else:
+    binaries = []
 
 datas = [
     ('src/common/abi/*', 'src/common/abi/'),

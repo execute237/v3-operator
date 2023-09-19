@@ -13,6 +13,7 @@ jobs:
           - OS: macos-11
             PYTHON_VERSION: 3.10.10
             BUILD_CMD: |
+              ls /usr/lib/
               export PYTHONHASHSEED=42
               export BUILD_FILE_NAME=operator-${RELEASE_VERSION}-darwin-amd64;
               mkdir ${BUILD_FILE_NAME};
