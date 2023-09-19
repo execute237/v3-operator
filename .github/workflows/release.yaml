@@ -17,6 +17,7 @@ jobs:
               export BUILD_FILE_NAME=operator-${RELEASE_VERSION}-darwin-amd64;
               mkdir ${BUILD_FILE_NAME};
               brew install krb5
+              pip3 install psycopg2-binary
               git rev-parse --short HEAD > GIT_SHA
               poetry run pyinstaller \
                 --distpath ./${BUILD_FILE_NAME} \
