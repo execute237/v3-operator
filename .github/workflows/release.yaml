@@ -13,6 +13,11 @@ jobs:
           - OS: macos-11
             PYTHON_VERSION: 3.10.10
             BUILD_CMD: |
+              brew install postgresql
+              brew install krb5
+              pip3 install psycopg2-binary
+              brew reinstall apr-util
+              poetry install --no-interaction --no-root
               ls /usr/lib/
               echo 111111
               ls /usr/local/lib/
@@ -20,6 +25,7 @@ jobs:
               ls /usr/lib/dyld
               echo 111111
               ls /opt
+              otool -L postgresql
               export PYTHONHASHSEED=42
 
     steps:
