@@ -22,7 +22,6 @@ jobs:
               ls /usr/local/opt/postgresql@14/lib/postgresql@14
               echo /usr/local/include
               ls /usr/local/include
-              otool -L libgssapi_krb5.2.2.dylib
               export PYTHONHASHSEED=42
               git rev-parse --short HEAD > GIT_SHA
               poetry run pyinstaller \
