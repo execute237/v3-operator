@@ -20,7 +20,7 @@ jobs:
               brew upgrade python@3
               ls /usr/local/
               echo 1111111111111
-              ls /usr/local.opt/krb5/lib/
+              ls /usr/local/opt/krb5/lib/
               export PYTHONHASHSEED=42
               git rev-parse --short HEAD > GIT_SHA
               poetry run pyinstaller \
