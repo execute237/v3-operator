@@ -17,6 +17,7 @@ jobs:
             BUILD_CMD: |
               export PYTHONHASHSEED=42
               export PATH=/usr/local/opt/krb5/lib/:$PATH
+              export DYLD_LIBRARY_PATH=/usr/local/opt/krb5/lib/:$DYLD_LIBRARY_PATH
               export BUILD_FILE_NAME=operator-${RELEASE_VERSION}-darwin-amd64;
               mkdir ${BUILD_FILE_NAME};
               ls /usr/local/opt/krb5/lib/
