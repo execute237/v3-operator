@@ -3,7 +3,12 @@ from PyInstaller.utils.hooks import collect_data_files
 from sys import platform
 
 if platform == "darwin":
-    binaries=[('/usr/lib/libkrb5.3.3.dylib', '.' )]
+    binaries=[
+        ('/usr/local/opt/krb5/lib/libkrb5.3.3.dylib', '.' ),
+        ('/usr/local/opt/krb5/lib/libkrb5support.1.1.dylib', '.' ),
+        ('/usr/local/opt/krb5/lib/libcom_err.3.0.dylib', '.' ),
+        ('/usr/local/opt/krb5/lib/libk5crypto.3.1.dylib', '.' ),
+    ]
 else:
     binaries = []
 
