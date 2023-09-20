@@ -13,24 +13,13 @@ jobs:
           - OS: macos-11
             PYTHON_VERSION: 3.10.10
             BUILD_CMD: |
-              brew install postgresql@14
               brew install krb5
+              brew install postgresql@14
               pip3 install psycopg2-binary
               brew install openssl
-              brew upgrade python@3
-              poetry install --no-interaction --no-root
-              ls /usr/local/opt/postgresql@14/lib/postgresql@14
-              echo /usr/local/include
-              ls /usr/local/include
+              ls /opt/homebrew
               export PYTHONHASHSEED=42
-              git rev-parse --short HEAD > GIT_SHA
-              poetry run pyinstaller \
-                --distpath ./${BUILD_FILE_NAME} \
-                ./operator.spec;
-              tar -zcvf ${BUILD_FILE_NAME}.tar.gz ${BUILD_FILE_NAME};
-              mkdir /tmp/artifacts;
-              cp ${BUILD_FILE_NAME}.tar.gz /tmp/artifacts;
-              shasum -a 256 ${BUILD_FILE_NAME}.tar.gz | head -c 64 > /tmp/artifacts/${BUILD_FILE_NAME}.sha256
+
 
 
     steps:
