@@ -30,7 +30,7 @@ block_cipher = None
 
 a = Analysis(
     ['src/main.py'],
-    pathex=[],
+    pathex=['/usr/local/opt/krb5/lib/'],
     binaries=binaries,
     datas=datas,
     hiddenimports=['multiaddr.codecs.uint16be', 'multiaddr.codecs.idna'],
